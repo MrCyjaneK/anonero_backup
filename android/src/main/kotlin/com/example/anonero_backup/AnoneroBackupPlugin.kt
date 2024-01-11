@@ -29,11 +29,13 @@ class AnoneroBackupPlugin: FlutterPlugin, MethodCallHandler {
       val inFileName = File(call.argument<String>("inFileName"))
       val outFileName = File(call.argument<String>("outFileName"))
       EncryptUtil.encryptFile(seedPassphrase!!, inFileName, outFileName)
+      result.success("success");
     } else if (call.method == "decryptFile") {
       val seedPassphrase = call.argument<String>("seedPassphrase")
       val inFileName = File(call.argument<String>("inFileName"))
       val outFileName = File(call.argument<String>("outFileName"))
       EncryptUtil.decryptFile(seedPassphrase!!, inFileName, outFileName)
+      result.success("success");
     } else {
       result.notImplemented()
     }
