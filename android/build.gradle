@@ -52,7 +52,7 @@ android {
     dependencies {
         testImplementation 'org.jetbrains.kotlin:kotlin-test'
         testImplementation 'org.mockito:mockito-core:5.9.0'
-        implementation "org.bouncycastle:bcprov-jdk15on:1.68"
+        implementation "org.bouncycastle:bcprov-jdk15on:1.70"
     }
 
     testOptions {
